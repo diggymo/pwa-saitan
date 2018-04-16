@@ -6,7 +6,7 @@
       <div class="column"></div>
     </div>
     <div class="columns">
-      <div class="column is-offset-1-mobile is-10-mobile is-4-tablet is-offset-2-tablet">
+      <div class="column is-12-mobile is-4-tablet is-offset-2-tablet">
         <div class="calendar">
           <div class="calendar-nav">
             <div class="calendar-nav-previous-month">
