@@ -15,12 +15,11 @@
         <nav class="tabs">
           <div class="container">
             <ul>
-              <li class="is-active"><a href="/#/top">HOME</a></li>
-              <li><a href="/#/event">行事</a></li>              
-              <li><a href="/#/blog">ブログ</a></li>
-              <li><a href="/#/access">アクセス</a></li>
-              <li><a href="/#/contacts">お問い合わせ</a></li>
-              <li><a href="/#/search">教理横断検索</a></li>
+              <li><router-link to="/home">HOME</router-link></li>
+              <li><router-link to="/event">行事</router-link></li>
+              <li><router-link to="/blog">ブログ</router-link></li>
+              <li><router-link to="/access">アクセス</router-link></li>
+              <li><router-link to="/search">教理横断検索</router-link></li>
             </ul>
           </div>
         </nav>

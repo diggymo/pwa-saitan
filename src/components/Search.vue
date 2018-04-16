@@ -12,11 +12,24 @@
           index-name="kyoten"
         >
           
-          <div class="columns is-centered">
+          <div class="columns">
             <div class="column is-4">
               <b-field>
-                <ais-search-box></ais-search-box>
-                <ais-powered-by></ais-powered-by>
+                <ais-input placeholder="おさしづ/教祖伝逸話篇/おふでさきから検索" :class-names="{'ais-input': 'input is-rounded'}"></ais-input>
+                <!-- <ais-search-box> -->
+                  <!-- <form role="search" action="">
+                    <div class="field has-addons">
+                      <div class="control">
+                        <input autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" class="ais-input input" placeholder="" type="search">
+                      </div>
+                      <div class="control">
+                        <button type="submit" class="button is-success ais-search-box__submit">
+                          検索ぅ
+                        </button>
+                      </div>
+                    </div>
+                  </form> -->
+                <!-- </ais-search-box> -->
               </b-field>
             </div>
             <div class="column is-8">
@@ -62,6 +75,9 @@
               </ais-pagination>
             </nav>
           </section>
+          <div class="column is-4 is-centered">
+            <ais-powered-by></ais-powered-by>              
+          </div>
         </ais-index>
       </div>
     </div>

@@ -7,7 +7,7 @@
     <div class="columns">    
       <div class="column is-offset-1-mobile is-offset-1-tablet is-3-tablet is-10-mobile">
         <div class="card">
-          <a href="/#/blog/hogehoge">
+          <router-link :to="{name: 'BlogInfo', params: {blog_id: 'hogehoge'}}">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -24,12 +24,12 @@
                 <small>2018/04/15 12:30</small>
               </div>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="column is-offset-1-mobile is-3-tablet is-10-mobile">
         <div class="card">
-          <a href="/#/blog/otomarikai">
+          <router-link :to="{name: 'BlogInfo', params: {blog_id: 'otomarikai'}}">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -45,12 +45,12 @@
                 <small>2018/04/01 06:30</small>
               </div>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
       <div class="column is-offset-1-mobile is-3-tablet is-10-mobile">
         <div class="card">
-          <a href="/#/blog/otomarikai">
+          <router-link :to="{name: 'BlogInfo', params: {blog_id: 'otomarikai'}}">
             <div class="card-image">
               <figure class="image is-4by3">
                 <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
@@ -66,7 +66,7 @@
                 <small>2018/04/29 06:30</small>
               </div>
             </div>
-          </a>
+          </router-link>
         </div>
       </div>
     </div>
