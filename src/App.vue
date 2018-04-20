@@ -15,7 +15,7 @@
         <nav class="tabs">
           <div class="container">
             <ul>
-              <li><router-link to="/home">HOME</router-link></li>
+              <li><router-link to="/">HOME</router-link></li>
               <li><router-link to="/event">行事</router-link></li>
               <li><router-link to="/blog">ブログ</router-link></li>
               <li><router-link to="/access">アクセス</router-link></li>

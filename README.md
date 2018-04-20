@@ -27,6 +27,19 @@ npm run e2e
 npm test
 ```
 
+## Deploy Setup
+
+```bash
+
+docker pull nginx
+
+# build an image as "your-image".
+docker build -t your-image ./
+
+# run an container as "your-container" in "8989" port.
+docker run --name your-container -d -p 8989:80 your-image
+```
+
 
 
 
