@@ -130,7 +130,7 @@
 <script>
 
 export default {
-  name: 'access',
+  name: 'イベント',
   data () {
     return {
       msg: 'Welcome to Your Vue.js PWA',
@@ -140,6 +140,9 @@ export default {
         {'date': '21', 'name': '月次祭', 'place': '自教会神殿', 'start_time': '17:00'}
       ]
     }
+  },
+  mounted () {
+    this.$emit('updateSubtitle', 'イベント')
   }
 }
 </script>

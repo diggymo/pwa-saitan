@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <section class="hero is-info">
+    <section class="hero is-info is-bold">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            西丹分教会
+            西丹分教会のHP
           </h1>
           <h2 class="subtitle">
             {{ subtitle }}
@@ -12,25 +12,28 @@
         </div>
       </div>
       <div class="hero-foot">
-        <nav class="tabs">
+        <nav class="tabs is-boxed is-fullwidth">  
           <div class="container">
             <ul>
-              <li><router-link to="/">HOME</router-link></li>
-              <li><router-link to="/event">行事</router-link></li>
-              <li><router-link to="/blog">ブログ</router-link></li>
-              <li><router-link to="/access">アクセス</router-link></li>
-              <li><router-link to="/search">教理横断検索</router-link></li>
+              <router-link tag="li" active-class="is-active" to="/home"><a>HOME</a></router-link>
+              <router-link tag="li" active-class="is-active" to="/event"><a>イベント</a></router-link>
+              <router-link tag="li" active-class="is-active" to="/contacts"><a>お問い合わせ</a></router-link>
+              <router-link tag="li" active-class="is-active" to="/blog"><a>ブログ</a></router-link>
+              <router-link tag="li" active-class="is-active" to="/access"><a>アクセス</a></router-link>
+              <router-link tag="li" active-class="is-active" to="/search"><a>教理横断検索</a></router-link>
             </ul>
           </div>
         </nav>
       </div>
     </section>
-    <transition  name="slide-fade">
-      <router-view 
-      v-on:updateSubtitle="updateSubtitle"
-      @sending="sending"
-      ></router-view>
-    </transition>
+    <section class="section is-paddingless">
+      <transition  name="slide-fade">
+        <router-view 
+        v-on:updateSubtitle="updateSubtitle"
+        @sending="sending"
+        ></router-view>
+      </transition>
+    </section>
   </div>
 </template>
 
@@ -60,6 +63,9 @@ export default {
         position: 'is-bottom',
         type: 'is-success'
       })
+    },
+    isActive (name) {
+      return name === this.subtitle
     }
   }
 }

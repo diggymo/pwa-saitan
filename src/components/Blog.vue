@@ -82,7 +82,7 @@ export default {
     }
   },
   mounted () {
-    this.$emit('updateSubtitle', 'アクセス')
+    this.$emit('updateSubtitle', 'ブログ')
   }
 }
 </script>

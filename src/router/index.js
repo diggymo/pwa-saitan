@@ -7,6 +7,7 @@ import Event from '@/components/Event'
 import Blog from '@/components/Blog'
 import BlogInfo from '@/components/BlogInfo'
 import Search from '@/components/Search'
+import Home from '@/components/Home'
 
 Vue.use(Router)
 
@@ -46,6 +47,16 @@ export default new Router({
       path: '/search',
       name: 'Search',
       component: Search
+    },
+    // {
+    //   path: '/',
+    //   name: 'fff',
+    //   component: Hello
+    // },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
     }
   ]
 })
