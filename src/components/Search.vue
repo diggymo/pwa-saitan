@@ -13,7 +13,7 @@
         >
           
           <div class="columns">
-            <div class="column is-4">
+            <div class="column is-12">
               <b-field>
                 <ais-input placeholder="おさしづ/教祖伝逸話篇/おふでさきから検索" :class-names="{'ais-input': 'input is-rounded'}"></ais-input>
                 <!-- <ais-search-box> -->
@@ -32,7 +32,9 @@
                 <!-- </ais-search-box> -->
               </b-field>
             </div>
-            <div class="column is-8">
+          </div>
+          <div class="columns">
+            <div class="column is-12">
                <section>
                   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
                     <ais-pagination :class-names="{

@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <section class="hero is-info">
+    <section class="hero is-info is-bold">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
-            西丹分教会
+            西丹分教会のHP
           </h1>
           <h2 class="subtitle">
             {{ subtitle }}
@@ -15,11 +15,12 @@
         <nav class="tabs">
           <div class="container">
             <ul>
-              <li><router-link to="/">HOME</router-link></li>
-              <li><router-link to="/event">行事</router-link></li>
-              <li><router-link to="/blog">ブログ</router-link></li>
-              <li><router-link to="/access">アクセス</router-link></li>
-              <li><router-link to="/search">教理横断検索</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('home')}" to="/">HOME</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('home')}" to="/">HOME</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('event')}" to="/event">行事</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('blog')}" to="/blog">ブログ</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('access')}" to="/access">アクセス</router-link></li>
+              <li><router-link v-bind:class="{'is-active': isActive('search')}" to="/search">教理横断検索</router-link></li>
             </ul>
           </div>
         </nav>
@@ -60,6 +61,11 @@ export default {
         position: 'is-bottom',
         type: 'is-success'
       })
+    }
+  },
+  computed: {
+    isActive (name) {
+      return name === this.subtitle
     }
   }
 }
