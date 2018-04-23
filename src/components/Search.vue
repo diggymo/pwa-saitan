@@ -4,14 +4,12 @@
       <div class="column">
       </div>
     </div>
-    <div class="columns">
-      <div class="column is-offset-1 is-10">
+    <section class="section">
         <ais-index
           app-id="AYYO2YO3GP"
           api-key="c263b3c017c9a1de029578a9c3093325"
           index-name="kyoten"
         >
-          
           <div class="columns">
             <div class="column is-12">
               <b-field>
@@ -34,7 +32,15 @@
             </div>
           </div>
           <div class="columns">
-            <div class="column is-12">
+            <div class="column is-6">
+              <ais-refinement-list attribute-name="書名" :class-names="{
+                'ais-refinement-list__label': 'tag is-light',
+                'ais-refinement-list__value': 'tag is-light',
+                'ais-refinement-list__count': 'tag is-primary'
+                }">
+                </ais-refinement-list>
+            </div>
+            <div class="column is-6 is-vertical-center ">
                <section>
                   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
                     <ais-pagination :class-names="{
@@ -46,7 +52,6 @@
                 </section>
             </div>
           </div>
-          
           <ais-results>
             <template slot-scope="{ result }">
               <div class="card">
@@ -54,7 +59,7 @@
                   <div class="media">
                     <div class="media-content">
                       <h2 class="title is-2">{{ result.書名 }}：{{ result.大カテゴリ }}</h2>
-                      <h4 class="title is-4">{{ result.中カテゴリ }}</h4>
+                      <h4 class="title is-4">{{ result.中カテゴリ }}</h4>                  
                     </div>
                   </div>
                   <div class="content">
@@ -81,18 +86,15 @@
             <ais-powered-by></ais-powered-by>              
           </div>
         </ais-index>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
-
 export default {
   name: 'access',
   data () {
-    return {
-    }
+    return {}
   },
   mounted () {
     this.$emit('updateSubtitle', '教理横断検索')
@@ -101,7 +103,12 @@ export default {
 </script>
 
 <style type="css">
-  em {
-    background-color: coral !important;
-  }
+em {
+  background-color: coral !important;
+}
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
 </style>
