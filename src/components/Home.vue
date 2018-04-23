@@ -22,6 +22,24 @@ export default {
   },
   mounted () {
     this.$emit('updateSubtitle', 'HOME')
+  },
+  created () {
+    this.recommend()
+  },
+  methods: {
+    recommend () {
+      this.$snackbar.open({
+        duration: 6000,
+        message: 'ご意見等はTwitterまでドウゾ👉',
+        type: 'is-warning',
+        position: 'is-bottom-right',
+        actionText: 'MyTwitter',
+        queue: false,
+        onAction: () => {
+          window.open('https://twitter.com/marooon88', '_blank')
+        }
+      })
+    }
   }
 }
 </script>
