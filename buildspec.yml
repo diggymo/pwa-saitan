@@ -4,8 +4,6 @@ phases:
   install:
     commands:
       - echo Nothing to do in the install phase...
-      - curl -O https://bootstrap.pypa.io/get-pip.py
-      - python3 get-pip.py --user
       - aws --version 
   pre_build:
     commands:
