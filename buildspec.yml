@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Nothing to do in the install phase...
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - eval `aws ecr get-login --no-include-email --region ap-northeast-1`
+      - docker build -t saitan-repository .
+      - docker tag saitan-repository:latest 843121076071.dkr.ecr.ap-northeast-1.amazonaws.com/saitan-repository:latest 
+      - docker push 843121076071.dkr.ecr.ap-northeast-1.amazonaws.com/saitan-repository:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`

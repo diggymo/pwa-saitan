@@ -40,7 +40,7 @@
                 }">
                 </ais-refinement-list>
             </div>
-            <div class="column is-6 is-vertical-center ">
+            <div class="column is-6 is-vertical-center">
                <section>
                   <nav class="pagination is-centered" role="navigation" aria-label="pagination">
                     <ais-pagination :class-names="{
