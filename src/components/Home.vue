@@ -7,7 +7,7 @@
       <img src="/static/img/home/IMG_1407.JPG"/>
     </figure>
     <figure class="image is-3by1">
-      <img src="/static/img/home/IMG_1408.JPG"/>
+      <img src="/static/img/home/IMG_1410.JPG"/>
     </figure>
   </div>
 </template>
