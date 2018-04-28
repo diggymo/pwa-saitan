@@ -15,9 +15,16 @@
               </a>
             </p>
             <p class="control">
-              <a class="bd-tw-button button is-dark" data-social-network="Twitter" data-social-action="tweet" target="_blank" href="https://github.com/diggymo/pwa-saitan">
+              <a class="bd-tw-button button is-dark" data-social-network="GitHub" data-social-action="tweet" target="_blank" href="https://github.com/diggymo/pwa-saitan">
                 <span class="icon">
                   <b-icon icon="github-circle"></b-icon>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="bd-tw-button button is-white" data-social-network="HatenaBlog" data-social-action="hatena" target="_blank" href="https://morimori-kochan.hatenablog.com/">
+                <span class="icon">
+                  <img src="/static/img/logo/hatenablog-logo.svg">
                 </span>
               </a>
             </p>
