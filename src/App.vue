@@ -2,9 +2,9 @@
   <div id="app">
     <nav class="navbar is-fixed-top is-primary">
       <div class="navbar-brand">
-        <a class="navbar-item" href="https://bulma.io">
+        <router-link class="navbar-item" active-class="" to="/home">
           <img src="/static/img/icons/brand.png" alt="Bulma: a modern CSS framework based on Flexbox" width="64" height="28">
-        </a>
+        </router-link>
         <div class="navbar-item">
           <div class="field is-grouped">
             <p class="control">

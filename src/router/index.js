@@ -47,7 +47,11 @@ export default new Router({
       name: 'Home',
       component: Home
     },
-    { path: '/', redirect: '/home' }
+    {
+      path: '/',
+      name: 'root',
+      redirect: '/home'
+    }
   ],
   linkActiveClass: 'is-active'
 })
