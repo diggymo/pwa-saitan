@@ -59,9 +59,6 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js PWA'
     }
-  },
-  mounted () {
-    this.$emit('updateSubtitle', 'アクセス')
   }
 }
 </script>

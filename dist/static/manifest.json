@@ -1,6 +1,6 @@
 {
-  "name": "pwa-saitan",
-  "short_name": "pwa-saitan",
+  "name": "sai-tan",
+  "short_name": " sai-tan",
   "icons": [
     {
       "src": "/static/img/icons/android-chrome-192x192.png",
@@ -23,7 +23,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/",
   "background_color": "#000000",
   "theme_color": "#4DBA87",
   "display": "standalone"

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
 import Access from '@/components/Access'
 import Contacts from '@/components/Contacts'
 import Event from '@/components/Event'
@@ -17,11 +16,6 @@ export default new Router({
       path: '/access',
       name: 'Access',
       component: Access
-    },
-    {
-      path: '/top',
-      name: 'Hello',
-      component: Hello
     },
     {
       path: '/contacts',
@@ -48,15 +42,12 @@ export default new Router({
       name: 'Search',
       component: Search
     },
-    // {
-    //   path: '/',
-    //   name: 'fff',
-    //   component: Hello
-    // },
     {
       path: '/home',
       name: 'Home',
       component: Home
-    }
-  ]
+    },
+    { path: '/', redirect: '/home' }
+  ],
+  linkActiveClass: 'is-active'
 })

@@ -110,9 +110,6 @@ export default {
   data () {
     return {
     }
-  },
-  mounted () {
-    this.$emit('updateSubtitle', this.$route.params.blog_id)
   }
 }
 </script>

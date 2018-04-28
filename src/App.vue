@@ -1,39 +1,53 @@
 <template>
   <div id="app">
-    <section class="hero is-info is-bold">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            西丹分教会のHP
-          </h1>
-          <h2 class="subtitle">
-            {{ subtitle }}
-          </h2>
+    <nav class="navbar is-fixed-top is-primary">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="/static/img/icons/brand.png" alt="Bulma: a modern CSS framework based on Flexbox" width="64" height="28">
+        </a>
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="bd-tw-button button is-info" data-social-network="Twitter" data-social-action="tweet" target="_blank" href="https://twitter.com/marooon88">
+                <span class="icon">
+                  <b-icon icon="twitter"></b-icon>
+                </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="bd-tw-button button is-dark" data-social-network="Twitter" data-social-action="tweet" target="_blank" href="https://github.com/diggymo/pwa-saitan">
+                <span class="icon">
+                  <b-icon icon="github-circle"></b-icon>
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="navbar-burger burger" v-bind:class="{'is-active': isBurgerActive}" @click="isBurgerActive = !isBurgerActive">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">  
-          <div class="container">
-            <ul>
-              <router-link tag="li" active-class="is-active" to="/home"><a>HOME</a></router-link>
-              <router-link tag="li" active-class="is-active" to="/event"><a>イベント</a></router-link>
-              <router-link tag="li" active-class="is-active" to="/contacts"><a>お問い合わせ</a></router-link>
-              <router-link tag="li" active-class="is-active" to="/blog"><a>ブログ</a></router-link>
-              <router-link tag="li" active-class="is-active" to="/access"><a>アクセス</a></router-link>
-              <router-link tag="li" active-class="is-active" to="/search"><a>教理横断検索</a></router-link>
-            </ul>
+      <div class="navbar-menu" v-bind:class="{'is-active': isBurgerActive}">
+        <transition name="fade">        
+          <div class="navbar-start">
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/home">Home</router-link>
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/event">イベント</router-link>
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/contacts">お問い合わせ</router-link>
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/blog">ブログ</router-link>
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/access">アクセス</router-link>
+            <router-link @click.native="isBurgerActive = false" class="navbar-item" to="/search">教理横断検索</router-link>
           </div>
-        </nav>
+        </transition>                
       </div>
-    </section>
-    <section class="section is-paddingless">
-      <transition  name="slide-fade">
+    </nav>
+     <transition  name="slide-fade">
         <router-view 
         v-on:updateSubtitle="updateSubtitle"
         @sending="sending"
         ></router-view>
       </transition>
-    </section>
   </div>
 </template>
 
@@ -43,7 +57,9 @@ export default {
   name: 'app',
   data: function () {
     return {
-      subtitle: 'hogehoge'
+      subtitle: 'hogehoge',
+      navigation: 'home',
+      isBurgerActive: false
     }
   },
   methods: {

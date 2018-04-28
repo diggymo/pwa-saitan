@@ -20,9 +20,6 @@ export default {
     return {
     }
   },
-  mounted () {
-    this.$emit('updateSubtitle', 'HOME')
-  },
   created () {
     this.recommend()
   },

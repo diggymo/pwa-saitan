@@ -72,9 +72,6 @@ export default {
       msg: 'Welcome to Your Vue.js PWA'
     }
   },
-  mounted () {
-    this.$emit('updateSubtitle', 'お問い合わせ')
-  },
   methods: {
     send () {
       this.$emit('sending')

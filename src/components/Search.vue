@@ -95,9 +95,6 @@ export default {
   name: 'access',
   data () {
     return {}
-  },
-  mounted () {
-    this.$emit('updateSubtitle', '教理横断検索')
   }
 }
 </script>
